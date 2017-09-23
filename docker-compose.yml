@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  broadsea-shiny:
+    build: .
+    image: ohdsi/broadsea-shiny
+    ports:
+      - "80:3838"
+    volumes:
+     - ./ShinyDeploy/:/srv/shiny-server/:ro
