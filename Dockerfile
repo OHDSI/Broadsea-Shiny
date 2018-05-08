@@ -10,5 +10,6 @@ RUN R -e " install.packages(c( \
   'shinydashboard', \
   'DT', \
   'pROC', \
-  'SqlRender' \
+  'SqlRender', \
+  'EmpiricalCalibration' \
 ), repos='http://cran.rstudio.com/') "
