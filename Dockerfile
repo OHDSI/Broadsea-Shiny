@@ -7,7 +7,6 @@ RUN R -e "install.packages( \
  c( \
   'rJava', \
   'SqlRender', \
-  'ggplot2', \
   'shinydashboard', \
   'DT', \
   'pROC', \
@@ -15,3 +14,4 @@ RUN R -e "install.packages( \
  ), \ 
  repos='http://cran.rstudio.com/', \
 ) "
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_2.2.1.tar.gz', repos=NULL, type='source') "
