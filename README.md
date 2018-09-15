@@ -3,6 +3,16 @@ A Docker container based on rocker/shiny with added java jdk and additional R pa
 
 ## Configuration Options
 
+### Set the database connection environment variables
+```
+shinydbServer
+shinydbDatabase
+shinydbPort
+shinydbUser
+shinydbPw
+shinydbSchema
+```
+
 ### Override the Shiny server config file & make the access log available on the Docker host
 
 * Optionally append the below volume mapping statements to the end of the broadsea-shiny volumes section of the docker-compose.yml file.
