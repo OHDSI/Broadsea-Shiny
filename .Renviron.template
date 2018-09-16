@@ -1,0 +1,6 @@
+shinydbDatabase=""
+shinydbPort=""
+shinydbPw=""
+shinydbSchema=""
+shinydbServer=""
+shinydbUser=""
