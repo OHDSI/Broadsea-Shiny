@@ -3,15 +3,8 @@ A Docker container based on rocker/shiny with added java jdk and additional R pa
 
 ## Configuration Options
 
-### Set the database connection environment variables
-```
-shinydbServer
-shinydbDatabase
-shinydbPort
-shinydbUser
-shinydbPw
-shinydbSchema
-```
+### Set the database connection environment variables in .Renviron file 
+(see .Renviron.template file for list of environment variables)
 
 ### Override the Shiny server config file & make the access log available on the Docker host
 
