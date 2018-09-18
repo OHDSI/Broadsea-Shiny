@@ -11,6 +11,7 @@ RUN R -e "install.packages( \
   'shinydashboard', \
   'DT', \
   'pROC', \
+  'DatabaseConnector', \
   'EmpiricalCalibration' \
  ), \
  repos='http://cran.rstudio.com/', \
