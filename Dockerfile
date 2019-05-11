@@ -21,7 +21,8 @@ RUN R -e "install.packages( \
   'DatabaseConnector', \
   'EmpiricalCalibration', \
   'ggplot2', \
-  'shinyWidgets' \
+  'shinyWidgets', \
+  'visNetwork' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
