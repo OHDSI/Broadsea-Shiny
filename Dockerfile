@@ -23,6 +23,8 @@ RUN R -e "install.packages( \
   'ggplot2', \
   'shinyWidgets', \
   'visNetwork' \
+  'googledrive' \
+  'shinyjs' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
