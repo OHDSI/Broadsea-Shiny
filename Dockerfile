@@ -22,8 +22,8 @@ RUN R -e "install.packages( \
   'EmpiricalCalibration', \
   'ggplot2', \
   'shinyWidgets', \
-  'visNetwork' \
-  'googledrive' \
+  'visNetwork', \
+  'googledrive', \
   'shinyjs' \
  ), \
  repos='http://cran.rstudio.com/', \
