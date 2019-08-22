@@ -24,7 +24,8 @@ RUN R -e "install.packages( \
   'shinyWidgets', \
   'visNetwork', \
   'googledrive', \
-  'shinyjs' \
+  'shinyjs', \
+  'shinyFiles' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
