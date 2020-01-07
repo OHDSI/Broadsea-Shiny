@@ -29,7 +29,7 @@ RUN R -e "install.packages( \
   'rhandsontable', \
   'shinyBS', \
   'shinythemes', \
-  'rlist' \
+  'rlist', \
   'uuid' \
  ), \
  repos='http://cran.rstudio.com/', \
