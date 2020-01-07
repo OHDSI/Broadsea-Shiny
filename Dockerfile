@@ -24,11 +24,11 @@ RUN R -e "install.packages( \
   'shinyWidgets', \
   'visNetwork', \
   'shinyjs', \
-  'shinyFiles' \
-  'auth0' \
-  'rhandsontable' \
-  'shinyBS' \
-  'shinythemes' \
+  'shinyFiles', \
+  'auth0', \
+  'rhandsontable', \
+  'shinyBS', \
+  'shinythemes', \
   'rlist' \
  ), \
  repos='http://cran.rstudio.com/', \
