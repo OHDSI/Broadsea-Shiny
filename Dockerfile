@@ -30,6 +30,7 @@ RUN R -e "install.packages( \
   'shinyBS', \
   'shinythemes', \
   'rlist' \
+  'uuid' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
