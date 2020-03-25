@@ -31,7 +31,9 @@ RUN R -e "install.packages( \
   'shinythemes', \
   'rlist', \
   'uuid', \
-  'VennDiagram' \
+  'VennDiagram', \
+  'zeallot', \
+  'reshape2' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
