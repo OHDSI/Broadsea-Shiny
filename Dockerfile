@@ -30,7 +30,8 @@ RUN R -e "install.packages( \
   'shinyBS', \
   'shinythemes', \
   'rlist', \
-  'uuid' \
+  'uuid', \
+  'VennDiagram' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
