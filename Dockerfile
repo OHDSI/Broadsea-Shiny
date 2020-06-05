@@ -33,7 +33,8 @@ RUN R -e "install.packages( \
   'uuid', \
   'VennDiagram', \
   'zeallot', \
-  'reshape2' \
+  'reshape2', \
+  'readr' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
