@@ -34,7 +34,9 @@ RUN R -e "install.packages( \
   'VennDiagram', \
   'zeallot', \
   'reshape2', \
-  'readr' \
+  'readr', \
+  'aws.s3', \
+  'aws.ec2metadata'
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
