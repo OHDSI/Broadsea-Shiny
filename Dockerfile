@@ -36,7 +36,8 @@ RUN R -e "install.packages( \
   'reshape2', \
   'readr', \
   'aws.s3', \
-  'aws.ec2metadata' \
+  'aws.ec2metadata', \
+  'shiny.i18n' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
