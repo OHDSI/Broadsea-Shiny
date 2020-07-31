@@ -37,7 +37,8 @@ RUN R -e "install.packages( \
   'readr', \
   'aws.s3', \
   'aws.ec2metadata', \
-  'shiny.i18n' \
+  'shiny.i18n', \
+  'pool' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
