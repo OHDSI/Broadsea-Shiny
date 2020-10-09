@@ -39,7 +39,9 @@ RUN R -e "install.packages( \
   'aws.ec2metadata', \
   'shiny.i18n', \
   'pool', \
-  'reshape' \
+  'reshape', \
+  'ggiraph', \
+  'checkmate' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
