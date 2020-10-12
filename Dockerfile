@@ -41,7 +41,8 @@ RUN R -e "install.packages( \
   'pool', \
   'reshape', \
   'ggiraph', \
-  'checkmate' \
+  'checkmate', \
+  'purrr' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
