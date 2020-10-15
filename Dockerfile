@@ -42,7 +42,7 @@ RUN R -e "install.packages( \
   'reshape', \
   'ggiraph', \
   'checkmate', \
-  'purrr',
+  'purrr', \
   'RJSONIO' \
  ), \
  repos='http://cran.rstudio.com/', \
