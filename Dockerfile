@@ -43,7 +43,8 @@ RUN R -e "install.packages( \
   'ggiraph', \
   'checkmate', \
   'purrr', \
-  'RJSONIO' \
+  'RJSONIO', \
+  'diffr' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
