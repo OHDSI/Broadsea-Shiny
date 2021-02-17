@@ -45,7 +45,8 @@ RUN R -e "install.packages( \
   'purrr', \
   'RJSONIO', \
   'diffr', \
-  'remotes' \
+  'remotes', \
+  'future' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
