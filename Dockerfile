@@ -46,7 +46,8 @@ RUN R -e "install.packages( \
   'RJSONIO', \
   'diffr', \
   'remotes', \
-  'future' \
+  'future', \
+  'UpSetR' \
  ), \
  repos='http://cran.rstudio.com/', \
 ) "
