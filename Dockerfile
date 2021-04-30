@@ -54,6 +54,16 @@ RUN R -e "install.packages( \
 
 RUN R -e "install.packages(pkgs = 'https://cran.r-project.org/src/contrib/Archive/googledrive/googledrive_0.1.3.tar.gz') "
 
+RUN R -e "install.packages( \
+ c( \
+  'ggrepel', \
+  'epitools', \
+  'extrafont', \
+  'cowplot' \
+ ), \
+ repos='http://cran.rstudio.com/', \
+) "
+
 RUN R -e "remotes::install_github('OHDSI/CirceR')" && \
     R -e "remotes::install_github('OHDSI/Capr', upgrade='always')"
 
