@@ -56,3 +56,6 @@ RUN R -e "install.packages(pkgs = 'https://cran.r-project.org/src/contrib/Archiv
 
 RUN R -e "remotes::install_github('OHDSI/CirceR')" && \
     R -e "remotes::install_github('OHDSI/Capr', upgrade='always')"
+
+RUN R -e "remotes::install_github('OHDSI/ROhdsiWebApi', upgrade='always')" && \
+    R -e "remotes::install_github('OHDSI/CohortDiagnostics', upgrade='always')"
