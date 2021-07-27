@@ -1,10 +1,11 @@
-FROM rocker/shiny
+FROM rocker/shiny:4.1.0
 
 MAINTAINER Lee Evans - www.ltscomputingllc.com
 
 RUN apt-get update && apt-get install -y \
     openjdk-8-jdk liblzma-dev libbz2-dev libicu-dev libssl-dev libxml2-dev \
     texlive-science texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
+    libtiff-dev libjpeg-dev \
     && R CMD javareconf
 
 RUN R -e "install.packages( \
@@ -49,7 +50,7 @@ RUN R -e "install.packages( \
   'future', \
   'UpSetR' \
  ), \
- repos='http://cran.rstudio.com/', \
+ repos='http://cran.rstudio.com/' \
 ) "
 
 RUN R -e "install.packages(pkgs = 'https://cran.r-project.org/src/contrib/Archive/googledrive/googledrive_0.1.3.tar.gz') "
@@ -59,9 +60,11 @@ RUN R -e "install.packages( \
   'ggrepel', \
   'epitools', \
   'extrafont', \
-  'cowplot' \
+  'cowplot', \
+  'jpeg', \
+  'survminer' \
  ), \
- repos='http://cran.rstudio.com/', \
+ repos='http://cran.rstudio.com/' \
 ) "
 
 RUN R -e "remotes::install_github('OHDSI/CirceR')" && \
