@@ -81,3 +81,7 @@ RUN R -e "install.packages( \
  ), \
  repos='http://cran.rstudio.com/' \
 ) "
+
+RUN R -e "install.packages('drat')" && \
+    R -e "drat::addRepo('OHDSI')" && \
+    R -e "install.packages('OhdsiSharing')"
