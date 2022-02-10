@@ -71,7 +71,8 @@ RUN R -e "remotes::install_github('OHDSI/CirceR')" && \
     R -e "remotes::install_github('OHDSI/Capr', upgrade='always')"
 
 RUN R -e "remotes::install_github('OHDSI/ROhdsiWebApi', upgrade='always')" && \
-    R -e "remotes::install_github('OHDSI/CohortDiagnostics', upgrade='always')"
+    R -e "remotes::install_github('OHDSI/CohortDiagnostics', upgrade='always')" && \
+    R -e "remotes::install_github('OHDSI/OhdsiSharing', upgrade='always')"
 
 RUN R -e "install.packages( \
  c( \
@@ -81,7 +82,3 @@ RUN R -e "install.packages( \
  ), \
  repos='http://cran.rstudio.com/' \
 ) "
-
-RUN R -e "install.packages('drat')" && \
-    R -e "drat::addRepo('OHDSI')" && \
-    R -e "install.packages('OhdsiSharing')"
