@@ -62,7 +62,9 @@ RUN R -e "install.packages( \
   'extrafont', \
   'cowplot', \
   'jpeg', \
-  'survminer' \
+  'survminer', \
+  'reactable', \
+  'markdownInput' \
  ), \
  repos='http://cran.rstudio.com/' \
 ) "
