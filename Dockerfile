@@ -1,11 +1,11 @@
-FROM rocker/shiny:4.1.0
+FROM rocker/shiny:4.2.0
 
 MAINTAINER Lee Evans - www.ltscomputingllc.com
 
 RUN apt-get update && apt-get install -y \
     openjdk-8-jdk liblzma-dev libbz2-dev libicu-dev libssl-dev libxml2-dev \
     texlive-science texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra \
-    libtiff-dev libjpeg-dev libnlopt-dev \
+    libtiff-dev libjpeg-dev libnlopt-dev cmake \
     && R CMD javareconf
 
 RUN R -e "install.packages( \
@@ -64,7 +64,9 @@ RUN R -e "install.packages( \
   'jpeg', \
   'survminer', \
   'reactable', \
-  'markdownInput' \
+  'markdownInput', \
+  'ggh4x', \
+  'vctrs' \
  ), \
  repos='http://cran.rstudio.com/' \
 ) "
