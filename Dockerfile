@@ -77,7 +77,9 @@ RUN R -e "remotes::install_github('OHDSI/CirceR')" && \
 RUN R -e "remotes::install_github('OHDSI/ROhdsiWebApi', upgrade='always')" && \
     R -e "remotes::install_github('OHDSI/CohortDiagnostics', upgrade='always')" && \
     R -e "remotes::install_github('OHDSI/OhdsiSharing', upgrade='always')" && \
-    R -e "remotes::install_github('OHDSI/OhdsiShinyModules', upgrade='always')"
+    R -e "remotes::install_github('OHDSI/OhdsiShinyModules', upgrade='always')" && \
+    R -e "remotes::install_github('OHDSI/ShinyAppBuilder', upgrade='always')" && \
+    R -e "remotes::install_github('OHDSI/ResultModelManager', upgrade='always')" 
 
 RUN R -e "install.packages( \
  c( \
