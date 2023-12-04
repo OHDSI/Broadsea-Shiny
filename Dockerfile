@@ -1,6 +1,13 @@
-FROM rocker/shiny:4.2.0
+FROM rocker/shiny:4.2.3
 
 MAINTAINER Lee Evans - www.ltscomputingllc.com
+
+ARG CRAN=https://packagemanager.posit.co/cran/__linux__/focal/latest
+ARG JAVA_PARAMS=-Xss100m
+
+# Sets CRAN to latest (or user specified) version
+RUN echo "options(repos=c(CRAN='$CRAN'))" >> /root/.Rprofile
+RUN echo "options(java.parameters = '$JAVA_PARAMS')" >> /root/.Rprofile
 
 RUN apt-get update && apt-get install -y \
     openjdk-8-jdk liblzma-dev libbz2-dev libicu-dev libssl-dev libxml2-dev \
@@ -37,6 +44,7 @@ RUN R -e "install.packages( \
   'reshape2', \
   'readr', \
   'aws.s3', \
+  'RSQLite', \
   'aws.ec2metadata', \
   'shiny.i18n', \
   'pool', \
@@ -49,8 +57,7 @@ RUN R -e "install.packages( \
   'remotes', \
   'future', \
   'UpSetR' \
- ), \
- repos='http://cran.rstudio.com/' \
+ ) \
 ) "
 
 RUN R -e "install.packages(pkgs = 'https://cran.r-project.org/src/contrib/Archive/googledrive/googledrive_0.1.3.tar.gz') "
@@ -68,7 +75,6 @@ RUN R -e "install.packages( \
   'ggh4x', \
   'vctrs' \
  ), \
- repos='http://cran.rstudio.com/' \
 ) "
 
 RUN R -e "remotes::install_github('OHDSI/CirceR')" && \
@@ -87,5 +93,4 @@ RUN R -e "install.packages( \
   'feasts', \
   'fable' \
  ), \
- repos='http://cran.rstudio.com/' \
 ) "
