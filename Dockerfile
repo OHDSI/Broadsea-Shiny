@@ -1,4 +1,4 @@
-FROM rocker/shiny:4.2.3
+FROM rocker/shiny:4.4.3
 
 MAINTAINER Lee Evans - www.ltscomputingllc.com
 
